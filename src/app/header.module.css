@@ -1,0 +1,23 @@
+.header {
+  max-width: 100vw;
+  background: #FAFBFC;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+  padding: 0 100px;
+
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+
+  box-sizing: border-box;
+}
+.nav_item {
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 20px;
+
+  color: #0290FF;
+}
