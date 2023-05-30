@@ -10,9 +10,14 @@ export default function Filter() {
   const [area, setArea] = useState("")
 
   const onSubmitHandler = () => {
-    console.log(date_start)
-    console.log(date_end)
-    console.log(area)
+    if(date_start.length !== 16 || date_end.length !== 16 || area === "") {
+      console.log("Некорректный ввод");
+    } else {
+      console.log(date_start)
+      console.log(date_end)
+      console.log(area)
+    }
+
   }
 
   return (
@@ -20,7 +25,7 @@ export default function Filter() {
       <form className={f.form} action="" onSubmit={onSubmitHandler}>
         <div className={f.inputs}>
           <div>
-            <label className={f.label} htmlFor="date_start" >
+            <label className={f.label} htmlFor="date_start" onClick={onSubmitHandler}>
               Начало периода
             </label>
             <Input_item1 id="date_start" setDate_start = {setDate_start} date_start = {date_start}/>

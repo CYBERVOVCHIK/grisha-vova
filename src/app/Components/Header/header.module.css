@@ -59,10 +59,15 @@
   text-decoration: none;
 }
 
+.quit:hover {
+  color: #0290FF;
+}
+
 .quit::after {
   position: relative;
   top: 4px;
   content: url(../../img/_logout_.svg);
   margin-left: 10px;
   width: 20px;
+  
 }
