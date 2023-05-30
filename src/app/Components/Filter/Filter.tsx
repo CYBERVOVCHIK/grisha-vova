@@ -4,9 +4,12 @@ import Input_item from "./Input_item";
 import f from "./filter.module.css";
 
 export default function Filter() {
+  const Submition = () => {
+    console.log()
+  }
   return (
     <div className={f.filter}>
-      <form className={f.form} action="">
+      <form className={f.form} action="" >
         <div className={f.inputs}>
           <div>
             <label className={f.label} htmlFor="date_start">
