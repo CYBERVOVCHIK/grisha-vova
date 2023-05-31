@@ -1,0 +1,8 @@
+.page {
+  position: relative;
+  min-height: 100%;
+}
+
+.content {
+  padding-bottom: 110px;
+}

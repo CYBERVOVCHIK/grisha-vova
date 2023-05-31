@@ -10,6 +10,15 @@ const markerIcon = new L.Icon({
   iconSize: [40, 40],
 });
 
+function MapPlaceholder() {
+  return (
+    <p>
+      Map of London.{' '}
+      <noscript>You need to enable JavaScript to see this map.</noscript>
+    </p>
+  )
+}
+
 export default function MapComponent() {
   let total = 100;
   let intouch = 50;
@@ -38,14 +47,25 @@ export default function MapComponent() {
         </div>
       </div>
       <div className={m.map}>
+        <div className={m.map_legend}>
+          <ul>
+            <li>ДТП</li>
+            <li>Передвижные комплексы</li>
+            <li>Стационарные комплексы</li>
+            <li>Концентрация ДТП в городе</li>
+            <li>Концентрация ДТП на дороге</li>
+          </ul>
+        </div>
+        <div className={m.leaflet_container}>
         <MapContainer
           className={m.leaflet_container}
           center={[55.79114510998451, 49.11037307686192]}
           zoom={13}
           scrollWheelZoom={false}
+          
         >
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution='Я не знаю как убрать флаг и подпись'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker
@@ -57,6 +77,7 @@ export default function MapComponent() {
             </Popup>
           </Marker>
         </MapContainer>
+        </div>
       </div>
     </div>
   );
