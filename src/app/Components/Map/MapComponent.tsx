@@ -10,15 +10,6 @@ const markerIcon = new L.Icon({
   iconSize: [40, 40],
 });
 
-function MapPlaceholder() {
-  return (
-    <p>
-      Map of London.{' '}
-      <noscript>You need to enable JavaScript to see this map.</noscript>
-    </p>
-  )
-}
-
 export default function MapComponent() {
   let total = 100;
   let intouch = 50;
