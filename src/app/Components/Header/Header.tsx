@@ -17,6 +17,11 @@ export default function Header() {
               <span>История авторизаций</span>
             </a>
           </li>
+          <li>
+            <a href="#" className={s.nav_item}>
+              <span>Администратор</span>
+            </a>
+          </li>
         </ul>
       </div>
 
