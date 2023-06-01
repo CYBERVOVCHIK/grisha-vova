@@ -3,7 +3,7 @@ import Filter from "./Components/Filter/Filter";
 import MapComponent from "./Components/Map/MapComponent";
 import Footer from "./Components/Footer/Footer";
 import p from "./page.module.css";
-import ExcelUpload from "./Components/ExcelUpload/Excel";
+import ExcelUpload from "./Components/ExcelUpload/ExcelUpload";
 
 export default function Home() {
   return (
