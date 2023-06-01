@@ -62,7 +62,7 @@
   top: 9px;
 }
 */
-.input_file_text {
+.input_file_text, .input_file_text_selected {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -74,7 +74,13 @@
   content: url('../../img/empty.svg');
   position: relative;
   top: 3px;
-
+  margin-right: 4px;
+}
+.input_file_text_selected::before {
+  content: url('../../img/Excel.svg');
+  position: relative;
+  top: 2px;
+  margin-right: 4px;
 }
 .input_file input[type="file"] {
   display: none;

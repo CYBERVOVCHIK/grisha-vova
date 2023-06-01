@@ -98,7 +98,7 @@ export default function Filter() {
               </label>
             </div>
           </div>
-
+            {/* должен быть input type=submit или button? */}
           <button className={`${f.submit}`}><span className={f.btn_text}>Применить</span></button>
         </div>
       </form>

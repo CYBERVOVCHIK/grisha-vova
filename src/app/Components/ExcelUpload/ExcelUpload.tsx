@@ -8,6 +8,7 @@ export default function ExcelUpload() {
   const [file, setFile] = useState<File>();
   const [selected, setSelected] = useState(false);
   const [found, setFound] = useState("Файл не найден")
+  
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       setFile(e.target.files[0]);
@@ -52,7 +53,8 @@ export default function ExcelUpload() {
         <form className={e.block_row_2}>
           <label className={e.input_file}>
             <input type="file" name="file" onChange={handleFileChange}></input>
-            <span className={e.input_file_text}>{`${found} ${selected? (file && `${file.name} - ${file.type}`): ""}`}</span>
+            {/* сделать ограничение по длине названия */} 
+            <span className={!selected? e.input_file_text : e.input_file_text_selected}>{`${found}${selected? (file && `${file.name}`) : ""}`}</span>
             <span className={e.input_file_btn}>Загрузить</span>
           </label>
         </form>
