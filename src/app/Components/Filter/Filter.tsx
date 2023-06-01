@@ -90,12 +90,10 @@ export default function Filter() {
               </label>
               <label htmlFor="two">
                 <input className={f.checkbox} type="checkbox" id="two" />{" "}
-                {/* надо через map добавлять населенные пункты и каждому элементу приписывать айди и этот айди передавать в handleOnChange*/}
                 Населенный пункт
               </label>
               <label htmlFor="three">
                 <input className={f.checkbox} type="checkbox" id="three" />{" "}
-                {/* надо через map добавлять населенные пункты и каждому элементу приписывать айди и этот айди передавать в handleOnChange*/}
                 Населенный пункт
               </label>
             </div>

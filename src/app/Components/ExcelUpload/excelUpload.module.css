@@ -52,6 +52,9 @@
 
   cursor: pointer;
 }
+.input_file_btn:hover {
+  color: #0290FF;
+}
 /*
 .input_file_btn::after {
   content: url('../../img/arrow.svg');
