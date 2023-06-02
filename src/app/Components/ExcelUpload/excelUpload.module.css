@@ -76,6 +76,9 @@
   top: 3px;
   margin-right: 4px;
 }
+.input_file_text_selected {
+  color: rgba(51, 51, 51, 0.8);
+}
 .input_file_text_selected::before {
   content: url('../../img/Excel.svg');
   position: relative;
