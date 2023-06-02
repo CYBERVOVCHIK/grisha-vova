@@ -59,6 +59,7 @@ export default function MapComponent() {
             attribution='Я не знаю как убрать флаг и подпись'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          {/* почему-то иконка маркера не загружается */}
           <Marker
             position={[55.82313839924307, 49.09658950859296]}
             icon={markerIcon}

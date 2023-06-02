@@ -8,12 +8,10 @@ export default function Filter() {
   const [date_start, setDate_start] = useState("");
   const [date_end, setDate_end] = useState("");
 
-  const [checkedState, setCheckedState] = useState(
-    new Array(3).fill('')
-);
-const handleOnChange = (id) => {
-  console.log(id);
-}
+  const [checkedState, setCheckedState] = useState(new Array(3).fill(""));
+  const handleOnChange = (id) => {
+    console.log(id);
+  };
   const [expanded, setExpanded] = useState(false);
 
   const onSubmitHandler = () => {
@@ -55,16 +53,22 @@ const handleOnChange = (id) => {
             />
           </div>
 
-
           <div className={f.multiselect}>
-            <div onClick={() => setExpanded(!expanded)} className={expanded? `${f.select_icon} ${f.select_icon_upside}` : `${f.select_icon} `}>
-
-            </div>
+            <div
+              onClick={() => setExpanded(!expanded)}
+              className={
+                expanded
+                  ? `${f.select_icon} ${f.select_icon_upside}`
+                  : `${f.select_icon} `
+              }
+            ></div>
             <label className={`${f.label}`} htmlFor="area_select">
               Районы республики
             </label>
             <div
-              className={expanded? `${f.selectBox}` : `${f.selectBox} ${f.can_hover}`}
+              className={
+                expanded ? `${f.selectBox}` : `${f.selectBox} ${f.can_hover}`
+              }
               onClick={() => setExpanded(!expanded)}
             >
               <select
@@ -80,28 +84,22 @@ const handleOnChange = (id) => {
             </div>
             <div className={expanded ? `${f.checkboxes}` : `${f.none}`}>
               <label htmlFor="one">
-                <input className={f.checkbox} type="checkbox" id="one" /> {/* надо через map добавлять населенные пункты и каждому элементу приписывать айди и этот айди передавать в handleOnChange*/}
-                 Населенный пункт         
-                                                               
+                <input className={f.checkbox} type="checkbox" id="one" />{" "}
+                {/* надо через map добавлять населенные пункты и каждому элементу приписывать айди и этот айди передавать в handleOnChange*/}
+                Населенный пункт
               </label>
               <label htmlFor="two">
-                <input className={f.checkbox} type="checkbox" id="two" /> {/* надо через map добавлять населенные пункты и каждому элементу приписывать айди и этот айди передавать в handleOnChange*/}
-                 Населенный пункт
+                <input className={f.checkbox} type="checkbox" id="two" />{" "}
+                Населенный пункт
               </label>
               <label htmlFor="three">
-                <input className={f.checkbox} type="checkbox" id="three" /> {/* надо через map добавлять населенные пункты и каждому элементу приписывать айди и этот айди передавать в handleOnChange*/}
-                 Населенный пункт
+                <input className={f.checkbox} type="checkbox" id="three" />{" "}
+                Населенный пункт
               </label>
             </div>
           </div>
-
-
-
-          <input
-            className={`${f.submit}`}
-            type="submit"
-            value={"Применить"}
-          ></input>
+            {/* должен быть input type=submit или button? */}
+          <button className={`${f.submit}`}><span className={f.btn_text}>Применить</span></button>
         </div>
       </form>
     </div>
