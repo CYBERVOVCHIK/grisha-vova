@@ -24,10 +24,9 @@ export default function Header() {
           </li>
         </ul>
       </div>
-
       <a href="#" className={s.quit}>
         <span>Выйти</span>
-      </a>
+      </a>   
     </header>
   );
 }

@@ -9,7 +9,7 @@ export default function Input_item(props) {
   return (
     <div>
       <input
-        type={type ? "text" : "datetime-local"}
+        type="datetime-local"
         onFocus={onFocus}
         onBlur={onBlur}
         className={f.input}
@@ -17,7 +17,7 @@ export default function Input_item(props) {
         id={props.id}
         value={props.date_start}
         onChange={(event) => props.setDate_start(event.target.value)}
-      ></input>
+      />
     </div>
   );
 }

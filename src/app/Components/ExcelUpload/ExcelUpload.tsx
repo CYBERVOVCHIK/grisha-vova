@@ -1,13 +1,14 @@
 "use client"
 import React from "react";
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState, useRef } from 'react';
 import e from "./excelUpload.module.css";
 
 export default function ExcelUpload() {
 
+  const file2 = useRef<File>(null);
   const [file, setFile] = useState<File>();
   const [selected, setSelected] = useState(false);
-  const [found, setFound] = useState("Файл не найден")
+  const [found, setFound] = useState("Файл не найден");
   
   const reduction = (name:string) => {
     if(name.length < 14) {
@@ -56,20 +57,21 @@ export default function ExcelUpload() {
     <div className={e.container}>
       <div className={e.block}>
         <span className={e.block_header}>
-          Добавить записи<br></br>о ДТП из Excel файла
+          Добавить записи<br/>о ДТП из Excel файла
         </span>
         <form className={e.block_row_2}>
           <label className={e.input_file}>
-            <input type="file" name="file" onChange={handleFileChange}></input>
-            <span className={!selected? e.input_file_text : e.input_file_text_selected}>{`${found}${selected? (file && `${reduction(file.name)}`) : ""}`}</span>
+            <input type="file" name="file" ref={file2} onChange={handleFileChange}/>
+            <span className={!selected? e.input_file_text : e.input_file_text_selected}>{`${found}${selected? (file2 && `${reduction(file2.name)}`) : ""}`}</span>
             <span className={e.input_file_btn}>Загрузить</span>
           </label>
         </form>
+        {/*  react-data-export библиотека для работы с экселем */}
         <button className={selected? e.submit : e.submit_disabled} disabled={!selected} onClick={() => console.log(123)}><span className={e.btn_text}>Применить</span></button>
       </div>
       <div className={e.block}>
         <span className={e.block_header}>
-          Добавить записи<br></br>о ДТП из Excel файла
+          Добавить записи<br/>о ДТП из Excel файла
         </span>
       </div>
       <div className={e.block}>
@@ -79,7 +81,7 @@ export default function ExcelUpload() {
       </div>
       <div className={e.block}>
         <span className={e.block_header}>
-          Обновить данные<br></br>по районам ДТП и комплексов
+          Обновить данные<br/>по районам ДТП и комплексов
         </span>
       </div>
     </div>

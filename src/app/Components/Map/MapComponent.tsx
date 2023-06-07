@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L, { icon } from "leaflet";
+import L from "leaflet";
 import m from "./MapComponent.module.css";
 import "leaflet/dist/leaflet.css";
 
